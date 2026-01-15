@@ -1,0 +1,49 @@
+package ejercicio3apartadoc;
+
+public class Rectangulo {
+private int puntoX1;
+public int getpuntoX1() {
+	return puntoX1;
+}
+
+private int puntoY1;
+public int getpuntoY1() {
+	return puntoY1;
+}
+
+private int puntoX2;
+public int getpuntoX2() {
+	return puntoX2;
+}
+
+private int puntoY2;
+public int getpuntoY2() {
+	return puntoY2;
+}
+
+public void setpuntoX1 ( int puntoX1) {
+	this.puntoX1 = puntoX1;
+}
+
+public void setpuntoX2 ( int puntoX2) {
+	this.puntoX1 = puntoX2;
+}
+
+public void setpuntoY1 ( int puntoY1) {
+	this.puntoY1 = puntoY1;
+}
+
+public void setpuntoY2 ( int puntoY2) {
+	this.puntoY2 = puntoY2;
+}
+Rectangulo(int x1, int y1, int x2, int y2){
+	if ( x2 > x1 && y2 > y1 ) {
+		this.puntoX1 = x1;
+		this.puntoY1 = y1;
+		this.puntoX2 = x2;
+		this.puntoY2 = y2;
+	} else {
+		System.out.println("Error: Las coordenadas no forman un rectángulo válido.");
+	}
+}
+}
