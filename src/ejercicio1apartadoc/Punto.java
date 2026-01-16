@@ -21,7 +21,7 @@
 	    }
 	    //Constructor de la clase
 	    Punto(int x, int y) {
-	        this.x = x;
-	        this.y = y;
+	       setx(x);
+	       sety(y);
 	    }
 	}	

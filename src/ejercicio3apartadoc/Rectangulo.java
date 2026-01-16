@@ -38,10 +38,10 @@ public void setpuntoY2 ( int puntoY2) {
 }
 Rectangulo(int x1, int y1, int x2, int y2){
 	if ( x2 > x1 && y2 > y1 ) {
-		this.puntoX1 = x1;
-		this.puntoY1 = y1;
-		this.puntoX2 = x2;
-		this.puntoY2 = y2;
+		setpuntoX1(x1);
+		setpuntoY1(y1);
+		setpuntoX2(x2);
+		setpuntoY2(y2);
 	} else {
 		System.out.println("Error: Las coordenadas no forman un rectángulo válido.");
 	}

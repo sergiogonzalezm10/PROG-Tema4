@@ -39,9 +39,9 @@ public void setapellidos(String apellidos) {
 }
 
 Persona(String DNI, String nombre, int edad, String apellidos){
-	this.DNI = DNI;
-	this.nombre = nombre;
-	this.edad = edad;
-	this.apellidos = apellidos;
+	setDNI(DNI);
+	setnombre(nombre);
+	setedad(edad);
+	setapellidos(apellidos);
 }
 }
