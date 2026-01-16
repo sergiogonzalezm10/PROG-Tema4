@@ -29,8 +29,9 @@ public class PrincipalPunto {
 	
         static void mostrar(Punto p) {
         	System.out.println( "---------------------------------" );
-        	System.out.println("(" + p.getx() + "," + p.gety() + ")");
+        	System.out.println(p);
         	System.out.println( "---------------------------------" );
         }
+        
     }
 
