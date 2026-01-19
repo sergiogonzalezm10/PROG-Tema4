@@ -36,6 +36,24 @@ public void setpuntoY1 ( int puntoY1) {
 public void setpuntoY2 ( int puntoY2) {
 	this.puntoY2 = puntoY2;
 }
+
+public void getPerimetro() {
+	int ancho = puntoX2 - puntoX1;
+	int alto = puntoY2 - puntoY1;
+	int perimetro = 2 * ( ancho + alto );
+	System.out.println("El perímetro del rectángulo es: " + perimetro);
+}
+
+public void getArea() {
+	int ancho = puntoX2 - puntoX1;
+	int alto = puntoY2 - puntoY1;
+	int area = ancho * alto;
+	System.out.println("El área del rectángulo es: " + area);
+	}
+
+public String toString() {
+	return "Rectángulo[(" + puntoX1 + ", " + puntoY1 + "), (" + puntoX2 + ", " + puntoY2 + ")]";
+}
 Rectangulo(int x1, int y1, int x2, int y2){
 	if ( x2 > x1 && y2 > y1 ) {
 		setpuntoX1(x1);

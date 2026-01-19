@@ -29,7 +29,7 @@ public class PrincipalPunto {
 	
         static void mostrar(Punto p) {
         	System.out.println( "---------------------------------" );
-        	System.out.println(p);
+        	System.out.println(p.toString());
         	System.out.println( "---------------------------------" );
         }
         

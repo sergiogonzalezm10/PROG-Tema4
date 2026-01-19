@@ -1,7 +1,5 @@
 package ejercicio4apartadob;
 
-import java.util.Random;
-
 public class PrincipalArticulo {
 
     public static void main(String[] args) {
