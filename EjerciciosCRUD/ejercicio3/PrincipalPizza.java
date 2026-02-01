@@ -6,16 +6,20 @@ public class PrincipalPizza {
 
     public static void main(String[] args) {
 
+    	// Inicio escáner
         Scanner sc = new Scanner(System.in);
+        
+        // Llama a la clase GestorPizzas
         GestorPizzas gestor = new GestorPizzas();
         int opcion;
 
+        // Do para que nos pregunte que deseamos hacer y llamar a aquellos métodos correspondientes
         do {
             System.out.println("\nPIZZAS");
             System.out.println("1. Listado de pizzas");
             System.out.println("2. Nuevo pedido");
             System.out.println("3. Pizza servida");
-            System.out.println("4. Salir");
+            System.out.println("4. Salir"); 
             System.out.print("Opción: ");
             opcion = sc.nextInt();
             sc.nextLine();
@@ -48,6 +52,7 @@ public class PrincipalPizza {
 
         } while (opcion != 4);
 
+        // Cierre escáner
         sc.close();
     }
 }

@@ -3,19 +3,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class GestorAlumnos {
+	
+	// Arraylist alumnos
+    private ArrayList<Alumno> alumnos = new ArrayList<>();
 
-    private ArrayList<Alumno> alumnos;
-
-    public GestorAlumnos() {
-        alumnos = new ArrayList<>();
-    }
-
-    // CREATE
+    // Crea los alumnos
     public void agregarAlumno(Alumno alumno) {
         alumnos.add(alumno);
     }
 
-    // READ
+    // Lee los alumnos creados anteriormente
     public void listarAlumnos() {
         if (alumnos.isEmpty()) {
             System.out.println("No hay alumnos registrados.");
@@ -26,7 +23,7 @@ public class GestorAlumnos {
         }
     }
 
-    // UPDATE (solo la nota)
+    // Actualiza la nota del alumno escogido
     public boolean modificarNota(String nombre, double nuevaNota) {
         for (Alumno a : alumnos) {
             if (a.getNombre().equalsIgnoreCase(nombre)) {
@@ -37,7 +34,7 @@ public class GestorAlumnos {
         return false;
     }
 
-    // DELETE
+    // Borrar alumno
     public boolean borrarAlumno(String nombre) {
         Iterator<Alumno> it = alumnos.iterator();
         while (it.hasNext()) {

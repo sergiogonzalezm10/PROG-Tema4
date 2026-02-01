@@ -8,10 +8,14 @@ public class PrincipalArticulos {
 
     public static void main(String[] args) {
 
+    	// Inicio escáner
         Scanner sc = new Scanner(System.in);
+        
+        // Llama a la clase GestorArticulos
         GestorArticulos gestor = new GestorArticulos();
         int opcion;
 
+        // Do para que nos pregunte que deseamos hacer y llamar a aquellos métodos correspondientes
         do {
             System.out.println("\nGESTISIMAL");
             System.out.println("1. Listado");
@@ -23,7 +27,7 @@ public class PrincipalArticulos {
             System.out.println("7. Salir");
             System.out.print("Opción: ");
             opcion = sc.nextInt();
-            sc.nextLine(); // limpiar buffer
+            sc.nextLine();
 
             switch (opcion) {
 
@@ -31,7 +35,7 @@ public class PrincipalArticulos {
                     gestor.listar();
                     break;
 
-                case 2: // Alta
+                case 2:
                     System.out.print("Nombre: ");
                     String nombre = sc.nextLine();
                     System.out.print("Precio: ");
@@ -44,14 +48,14 @@ public class PrincipalArticulos {
                     gestor.alta(new Articulo(nombre, precio, iva, unidades));
                     break;
 
-                case 3: // Baja
+                case 3:
                     System.out.print("Nombre del artículo: ");
                     if (!gestor.baja(sc.nextLine())) {
                         System.out.println("Artículo no encontrado.");
                     }
                     break;
 
-                case 4: // Modificación
+                case 4:
                     System.out.print("Nombre del artículo: ");
                     Articulo a = gestor.buscarPorNombre(sc.nextLine());
                     if (a != null) {
@@ -64,7 +68,7 @@ public class PrincipalArticulos {
                     }
                     break;
 
-                case 5: // Entrada
+                case 5:
                     System.out.print("Nombre del artículo: ");
                     a = gestor.buscarPorNombre(sc.nextLine());
                     if (a != null) {
@@ -75,7 +79,7 @@ public class PrincipalArticulos {
                     }
                     break;
 
-                case 6: // Salida
+                case 6:
                     System.out.print("Nombre del artículo: ");
                     a = gestor.buscarPorNombre(sc.nextLine());
                     if (a != null) {
@@ -91,6 +95,7 @@ public class PrincipalArticulos {
             
         } while (opcion != 7);
 
+        // Cierre escáner
         sc.close();
     }
 }

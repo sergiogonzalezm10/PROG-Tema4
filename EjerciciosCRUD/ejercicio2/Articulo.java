@@ -2,12 +2,13 @@ package ejercicio2;
 
 public class Articulo {
 
+	// Creamos variables
     private String nombre;
     private double precio;
     private int IVA = 21;
     private int unidades;
 
-   
+    // Getters y Setters
     public String getnombre() {
         return nombre;
     }
@@ -61,6 +62,7 @@ public class Articulo {
     }
 
     
+    // Método para restar unidades de stock
     public boolean vender(int cantidad) {
         if (cantidad > 0 && cantidad <= unidades) {
             unidades -= cantidad;
@@ -69,13 +71,14 @@ public class Articulo {
         return false;
     }
 
+    // Método para almacenar unidades
     public void almacenar(int cantidad) {
         if (cantidad > 0) {
             unidades += cantidad;
         }
     }
 
-   
+    // Método toString, mostrar datos del artículo
     public String toString() {
         return "Artículo[Nombre: " + nombre +
                ", Precio: " + precio + "€" +
@@ -84,7 +87,7 @@ public class Articulo {
                ", PVP: " + getPVP() + "€]";
     }
 
-   
+   // Constructor Artículo
     public Articulo(String nombre, double precio, int IVA, int unidades) {
         setnombre(nombre);
         setprecio(precio);

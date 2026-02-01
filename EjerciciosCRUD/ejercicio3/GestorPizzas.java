@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class GestorPizzas {
 
+	// Arraylist pizzas
     private ArrayList<Pizza> pizzas = new ArrayList<>();
 
     // Nuevo pedido
@@ -10,7 +11,7 @@ public class GestorPizzas {
         pizzas.add(p);
     }
 
-    // Listado
+    // Lista de las pizzas registradas
     public void listar() {
         if (pizzas.isEmpty()) {
             System.out.println("No hay pizzas registradas.");
@@ -21,7 +22,7 @@ public class GestorPizzas {
         }
     }
 
-    // Buscar pizza NO servida por tipo
+    // Buscar pizza no servida por tipo
     public Pizza buscarPendiente(String tipo) {
         for (Pizza p : pizzas) {
             if (p.getTipo().equalsIgnoreCase(tipo) && !p.isServida()) {

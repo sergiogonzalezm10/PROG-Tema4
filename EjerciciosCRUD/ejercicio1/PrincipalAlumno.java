@@ -4,10 +4,14 @@ import java.util.Scanner;
 public class PrincipalAlumno {
 
     public static void main(String[] args) {
+    	// Inicio escáner
         Scanner sc = new Scanner(System.in);
+        
+        // Llama a la clase GestorAlumno
         GestorAlumnos gestor = new GestorAlumnos();
         int opcion;
 
+        // Do para que nos pregunte que deseamos hacer y llamar a aquellos métodos correspondientes
         do {
             System.out.println("\nALUMNOS/AS");
             System.out.println("===================");
@@ -67,6 +71,7 @@ public class PrincipalAlumno {
 
         } while (opcion != 5);
 
+        // Cierre escáner
         sc.close();
     }
 }
